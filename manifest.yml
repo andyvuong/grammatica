@@ -1,0 +1,11 @@
+applications:
+- services:
+  - MongoLab-gs
+  disk_quota: 1024M
+  host: grammatica
+  name: grammatica
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 128M

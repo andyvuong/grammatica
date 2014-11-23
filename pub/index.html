@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="hide-scroll">
+    <head class="no-skrollr">
+        <meta charset="utf-8" />
+        <title>Grammmatica</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css' />
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://use.typekit.net/bgb3een.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/vendor/jquery.imgpreload.min.js"></script>
+        <script type="text/javascript" src="/static/js/vendor/skrollr.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+        <script>try {
+                Typekit.load();
+            } catch (e) {
+            }</script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body class="hide-scroll">
+        <div id="skrollr-body">
+            <div class="loading">
+                <img src="/static/images/loader.gif" alt="loading..." width="16" height="11" />
+            </div>
+
+            <div class="img-preload">
+                <img src="/static/images/first.jpg" />
+                <img src="/static/images/second.jpg"/>
+            </div>
+
+            <section class='introduction introduction-section'>
+
+                <div class="night-day">
+                    <img class="night image-align-night" src="/static/images/first.jpg" />
+                    <img class="day image-align-day display-none" src="/static/images/second.jpg"
+                        data-500='opacity:0'
+                        data-800='opacity:1'
+                    />
+                </div>
+
+                <div class="wrapper blockquote">
+                    
+                    <div align = "center" class="logo-slogan" 
+                        data-100='opacity:10;top:50%'
+                        data-800='top:70%;opacity:0'>
+                        <a href="javascript:;"><img class="logo-slogan-img" src="/static/images/grammatica.png" alt="Grammatica" /></a>
+                        <p>Learn English like never before.</p>
+                    </div>
+
+                    <blockquote
+                        data-0='opacity:0'
+                        data-800='bottom:20%;opacity:0'
+                        data-1200='opacity:1;bottom:45%'><div align='center'>
+                        <span class="tk-ff-meta-serif-web-pro"><font color = "white">"Improve your syntax one sentence at a time."</font></span></div>
+                    </blockquote>
+
+                    <a href='javascript:' id="introducing-layer-arrow" class='arrow-down introducing-layer-arrow-down'
+                        data-0='display:block;opacity:1'data-1300='display:none;opacity:0'>
+                        <img src='/static/images/arrow-down.png' />
+                    </a>
+
+                </div>
+
+            </section>
+
+            <!-- empty section for fake scroll -->
+            <section class="blockquote"></section>
+
+            <section id='Grammatica-welcome'></section>
+        
+            <section class='layer-advantages layer-advantages-section'>
+                
+                <div class="wrapper">
+                
+                </div>
+                <div class="wrapper">
+                    <!--<div class="logo-sm home-logo-sm"><a href="index.html#" class="home-logo-sm"><img class="home-logo-sm" src='/static/images/smallicon.png' alt="Grammatica logo" width="170" height="80" /></a></div>-->
+                
+<!-- <form action="http://grammatica.mybluemix.net/" method='POST'> -->
+                   <form action="http://grammatica.mybluemix.net/" method='POST'>
+                    <!--{% csrf_token %}-->
+                        <input name='data' class="form-control" rows="5" style = "position: absolute; left: 25px; top: 175px;"></textarea>
+                        <p><button type="button" class="btn btn-default btn-lg" style = "position: absolute; left: 420px; top: -150px;" >Submit</button></p>
+                    </form>
+                    <p> 
+                    With Grammatica, you will improve your language capabilities exponentially.</p>
+                </div>
+            </section>
+        </div>
+                <script type="text/javascript" src="/static/js/main.js"></script>
+    </body>
+
+</html>
