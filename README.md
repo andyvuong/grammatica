@@ -45,8 +45,8 @@ feeding the data into a mongoDB hosted on MongoLabs.
 -Some features are currently incomplete. This is not the project version we're demoing at WildHacks.
 
 ## Built by (UIUC):
-Jimmy Guo
-Timmeh Chow
-Michelle Zheng
-Andrew Breckenridge
-Andy Vuong
+- Jimmy Guo
+- Timmeh Chow
+- Michelle Zheng
+- Andrew Breckenridge
+- Andy Vuong
