@@ -6,7 +6,6 @@ var fs = require('fs');
 var request = require('request');
 
 var app = express();
-
 app.use(express.bodyParser());
 app.use(express.static(__dirname + '/pub'));
 
@@ -17,10 +16,9 @@ if (process.env.VCAP_SERVICES) {
 }
 else
 {
-    var conn ={ 'url' : 'mongodb://IbmCloud_95usgrmi_d1mul30q_87a32448:liYjsth8YQxHpTVRbDWRolwam1B1BETY@ds049570.mongolab.com:49570/IbmCloud_95usgrmi_d1mul30q'
+    var conn ={ 'url' : 'mongodb://IbmCloud_95usgrmiWRolwam1B1BETY@ds049570.mongolab.com:49570/IbmCloud_95usgrmi_d1mul30q'
               }
 }
-
 var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 // The port on the DEA for communication with the application:
@@ -31,15 +29,6 @@ app.get('/', function(req, res){
 	res.render('index');
 });
 
-//
-//
-//
-//
-// post //
-//
-//
-//
-//
 app.post('/', function(req, res){
     console.log('POST /');
     var cap = req.body;
@@ -54,23 +43,14 @@ app.post('/', function(req, res){
       if(!err) {
         console.log("We are connected");
         var collection = db.collection('collection');
-          // connect 
-//collection.find({value: {$elemMatch : {value: cap.data }} //}).nextObject(function(err, doc) {
-      //    console.log(doc);
-        //});
-          
-          
-          db.command({text:"collection" , search: cap.data }, function(err, cb){ 
-        console.log(cb.results);
-          });
-          
-          
+        db.command({text:"collection" , search: cap.data }, function(err, cb){ 
+        	console.log(cb.results);
+        });
        }
     });
 });
 
 // Start server
 app.listen(port, host);
-
 console.log('App started on port ' + port);
 
